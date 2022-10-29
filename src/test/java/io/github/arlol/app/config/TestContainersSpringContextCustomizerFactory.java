@@ -34,10 +34,10 @@ public class TestContainersSpringContextCustomizerFactory implements ContextCust
                 ) {
                     if (null == prodTestContainer) {
                         try {
-                            Class<? extends SqlTestContainer> containerClass = (Class<? extends SqlTestContainer>) Class.forName(
-                                this.getClass().getPackageName() + ".PostgreSqlTestContainer"
-                            );
-                            prodTestContainer = beanFactory.createBean(containerClass);
+                        	Class<?> containerClass = Class.forName(
+                                    this.getClass().getPackageName() + ".PostgreSqlTestContainer"
+                                );
+							prodTestContainer = (SqlTestContainer) beanFactory.createBean(containerClass);
                             beanFactory.registerSingleton(containerClass.getName(), prodTestContainer);
                             // ((DefaultListableBeanFactory)beanFactory).registerDisposableBean(containerClass.getName(), prodTestContainer);
                         } catch (ClassNotFoundException e) {

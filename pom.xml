@@ -173,7 +173,7 @@
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
             <!-- Inherited version from Spring Boot can't be used because of regressions -->
-            <version>${liquibase.version}</version>
+            <version>${liquibase.version}</version><!--$NO-MVN-MAN-VER$-->
         </dependency>
         <dependency>
             <groupId>org.mapstruct</groupId>
