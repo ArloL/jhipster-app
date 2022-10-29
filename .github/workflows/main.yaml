@@ -48,6 +48,7 @@ jobs:
     - uses: actions/setup-java@v3.5.1
       with:
         java-version: ${{ env.JAVA_VERSION }}
+        distribution: adopt
         cache: 'maven'
     - name: Install node.js packages
       run: npm install
@@ -70,6 +71,7 @@ jobs:
     - uses: actions/setup-java@v3.5.1
       with:
         java-version: ${{ env.JAVA_VERSION }}
+        distribution: adopt
         cache: 'maven'
     - name: Install node.js packages
       run: npm install
@@ -99,6 +101,7 @@ jobs:
       - uses: actions/setup-java@v3.5.1
         with:
           java-version: ${{ env.JAVA_VERSION }}
+          distribution: adopt
           cache: 'maven'
       - name: Install node.js packages
         run: npm install
