@@ -177,5 +177,10 @@
   },
   "cacheDirectories": [
     "node_modules"
-  ]
+  ],
+  "overrides": {
+    "generator-jhipster": {
+      "yeoman-environment": "3.12.1"
+    }
+  }
 }
