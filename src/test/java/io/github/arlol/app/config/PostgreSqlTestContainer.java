@@ -20,7 +20,8 @@ public class PostgreSqlTestContainer implements SqlTestContainer {
         }
     }
 
-    @Override
+    @SuppressWarnings("resource")
+	@Override
     public void afterPropertiesSet() {
         if (null == postgreSQLContainer) {
             postgreSQLContainer =

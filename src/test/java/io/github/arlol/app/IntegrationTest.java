@@ -1,6 +1,5 @@
 package io.github.arlol.app;
 
-import io.github.arlol.app.AppApp;
 import io.github.arlol.app.config.AsyncSyncConfiguration;
 import io.github.arlol.app.config.EmbeddedSQL;
 import java.lang.annotation.ElementType;

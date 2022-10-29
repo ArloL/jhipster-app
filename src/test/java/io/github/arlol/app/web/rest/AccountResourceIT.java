@@ -14,7 +14,6 @@ import io.github.arlol.app.security.AuthoritiesConstants;
 import io.github.arlol.app.service.UserService;
 import io.github.arlol.app.service.dto.AdminUserDTO;
 import io.github.arlol.app.service.dto.PasswordChangeDTO;
-import io.github.arlol.app.service.dto.UserDTO;
 import io.github.arlol.app.web.rest.vm.KeyAndPasswordVM;
 import io.github.arlol.app.web.rest.vm.ManagedUserVM;
 import java.time.Instant;
