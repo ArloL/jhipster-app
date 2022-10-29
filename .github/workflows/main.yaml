@@ -1,4 +1,4 @@
-name: Application CI
+name: Main
 on:
   push:
   schedule:
