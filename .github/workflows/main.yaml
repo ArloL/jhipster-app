@@ -1,5 +1,8 @@
 name: Application CI
-on: [push, pull_request]
+on:
+  push:
+  schedule:
+  - cron: '24 4 14 * *'
 jobs:
   debug:
     runs-on: ubuntu-latest
