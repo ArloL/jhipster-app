@@ -76,10 +76,13 @@ jobs:
     - name: Install node.js packages
       run: npm install
     - name: Run backend test
+      shell: bash
       run: npm run ci:backend:test
     - name: Run frontend test
+      shell: bash
       run: npm run ci:frontend:test
     - name: Package application
+      shell: bash
       run: npm run java:jar:prod
     - name: Make sure build did not change anything
       run: git diff --exit-code
