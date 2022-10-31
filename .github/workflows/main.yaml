@@ -37,55 +37,6 @@ jobs:
       env:
         MATRIX_CONTEXT: ${{ toJSON(matrix) }}
       run: echo "$MATRIX_CONTEXT"
-  macos:
-    runs-on: macos-latest
-    steps:
-    - uses: actions/checkout@v3.1.0
-    - uses: actions/setup-node@v3.5.1
-      with:
-        node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
-    - uses: actions/setup-java@v3.6.0
-      with:
-        java-version: ${{ env.JAVA_VERSION }}
-        distribution: adopt
-        cache: 'maven'
-    - name: Install node.js packages
-      run: npm install
-    - name: Run backend test
-      run: npm run ci:backend:test
-    - name: Run frontend test
-      run: npm run ci:frontend:test
-    - name: Package application
-      run: npm run java:jar:prod
-    - name: Make sure build did not change anything
-      run: git diff --exit-code
-  windows:
-    runs-on: windows-latest
-    steps:
-    - uses: actions/checkout@v3.1.0
-    - uses: actions/setup-node@v3.5.1
-      with:
-        node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
-    - uses: actions/setup-java@v3.6.0
-      with:
-        java-version: ${{ env.JAVA_VERSION }}
-        distribution: adopt
-        cache: 'maven'
-    - name: Install node.js packages
-      run: npm install
-    - name: Run backend test
-      shell: bash
-      run: npm run ci:backend:test
-    - name: Run frontend test
-      shell: bash
-      run: npm run ci:frontend:test
-    - name: Package application
-      shell: bash
-      run: npm run java:jar:prod
-    - name: Make sure build did not change anything
-      run: git diff --exit-code
   pipeline:
     name: app pipeline
     runs-on: ubuntu-latest
