@@ -45,7 +45,7 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
         cache: 'npm'
-    - uses: actions/setup-java@v3.5.1
+    - uses: actions/setup-java@v3.6.0
       with:
         java-version: ${{ env.JAVA_VERSION }}
         distribution: adopt
@@ -68,7 +68,7 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
         cache: 'npm'
-    - uses: actions/setup-java@v3.5.1
+    - uses: actions/setup-java@v3.6.0
       with:
         java-version: ${{ env.JAVA_VERSION }}
         distribution: adopt
@@ -101,7 +101,7 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
-      - uses: actions/setup-java@v3.5.1
+      - uses: actions/setup-java@v3.6.0
         with:
           java-version: ${{ env.JAVA_VERSION }}
           distribution: adopt
