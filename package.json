@@ -111,7 +111,7 @@
     "vuex": "3.6.2"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "1.1.4",
+    "@rushstack/eslint-patch": "1.2.0",
     "@types/jest": "28.1.8",
     "@types/node": "16.11.56",
     "@types/sinon": "10.0.13",
