@@ -48,7 +48,7 @@ jobs:
     - uses: actions/setup-java@v3.8.0
       with:
         java-version: ${{ env.JAVA_VERSION }}
-        distribution: adopt
+        distribution: temurin
         cache: 'maven'
     - name: Install node.js packages
       run: npm install
@@ -93,7 +93,7 @@ jobs:
     - uses: actions/setup-java@v3.8.0
       with:
         java-version: ${{ env.JAVA_VERSION }}
-        distribution: adopt
+        distribution: temurin
         cache: 'maven'
     - name: Install node.js packages
       run: npm install
@@ -129,7 +129,7 @@ jobs:
       - uses: actions/setup-java@v3.8.0
         with:
           java-version: ${{ env.JAVA_VERSION }}
-          distribution: adopt
+          distribution: temurin
           cache: 'maven'
       - name: Install node.js packages
         run: npm install
